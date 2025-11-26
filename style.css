@@ -1,0 +1,152 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    /* يمكن تغييره حسب ذوقك */
+}
+
+.navbar img {
+    width: 120px;
+    /* حجم الشعار */
+}
+
+/* روابط Navbar */
+.links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.links li a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.links li a:hover {
+    color: #ffcc00;
+}
+
+.links i.fa-basket-shopping {
+    color: antiquewhite;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* قسم المنتجات */
+.products {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.products .text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.products .text h5 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* الحاوية الرئيسية للبطاقات */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* كل بطاقة منتج */
+.product-card {
+    background-color: #fff;
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+/* صورة المنتج */
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* اسم الماركة واسم المنتج */
+.product-card .brand {
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    color: #222;
+}
+
+.product-card .product-name {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* السعر */
+.product-card .price {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff6600;
+}
+
+/* تقييم النجوم */
+.product-card .rating i {
+    color: #f8b500;
+}
+
+/* أيقونة السلة */
+.basket-car {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.basket-car:hover {
+    background-color: #e65c00;
+}
+
+/* تحسين استجابة التصميم */
+@media screen and (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
